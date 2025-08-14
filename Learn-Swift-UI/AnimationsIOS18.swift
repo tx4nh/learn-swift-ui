@@ -14,7 +14,7 @@ struct AnimationsIOS18: View {
     
     @State private var isBreathe: Bool = false
     @State private var isRotate: Bool = false
-    @State private var isWigle: Bool = false
+    @State private var isWiggle: Bool = false
     
     var body: some View {
         VStack{
@@ -35,11 +35,11 @@ struct AnimationsIOS18: View {
                     }
                 }
                 
-                Section("Wigle") {
+                Section("Wiggle") {
                     SymbolView(text: currentSymbol)
-                        .symbolEffect(.wiggle, value: isWigle)
-                    Button("Wigle") {
-                        isWigle.toggle()
+                        .symbolEffect(.wiggle, value: isWiggle)
+                    Button("Wiggle") {
+                        isWiggle.toggle()
                     }
                 }
             }
@@ -48,11 +48,10 @@ struct AnimationsIOS18: View {
                 index += 1
                 index %= symbols.count
             } label: {
-                Text("Chang Symbol")
+                Text("Change Symbol")
             }
-
         }
-    }
+    }
 }
 
 
